@@ -1,9 +1,9 @@
-package main.java.repository;
+package main.java.com.repository;
 
 import java.util.Arrays;
 import java.util.List;
 
-import main.java.model.Producto;
+import main.java.com.model.Producto;
 
 public class ProductoRepository {
 	

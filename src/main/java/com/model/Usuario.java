@@ -1,4 +1,4 @@
-package main.java.model;
+package main.java.com.model;
 
 public class Usuario {
 	private String username,password;

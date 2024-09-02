@@ -1,8 +1,8 @@
-package main.java.service;
+package main.java.com.service;
 
 import java.lang.Math;
 
-import main.java.model.Calculadora;
+import main.java.com.model.Calculadora;
 
 public class CalculadoraService implements Calculadora{
 	

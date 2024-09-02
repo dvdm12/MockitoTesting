@@ -1,10 +1,10 @@
-package main.java.service;
+package main.java.com.service;
 
 
 import java.util.List;
 
-import main.java.model.Producto;
-import main.java.repository.ProductoRepository;
+import main.java.com.model.Producto;
+import main.java.com.repository.ProductoRepository;
 
 public class ProductoService {
 	private ProductoRepository pRepository;

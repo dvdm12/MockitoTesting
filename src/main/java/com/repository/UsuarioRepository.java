@@ -1,18 +1,22 @@
-package main.java.repository;
+package main.java.com.repository;
 
 import java.util.Arrays;
 import java.util.List;
 
-import main.java.model.Usuario;
+import main.java.com.model.Usuario;
 
 public class UsuarioRepository {
 	
-	public Usuario findUserByCredentials(String username, String password) throws NullPointerException {
+	public Usuario findUserByCredentials(String username, String password)  {
 		
-		return getAllUsers().stream()
-				.filter(usuario->usuario.getUsername().equals(username) && usuario.getPassword().equals(password))
-				.findFirst().orElseThrow(()->new NullPointerException("User doesn't exists on list"));
+		return getAllUsers()
+				.stream()
+				.filter(user->user.getUsername().equals(username) 
+						&& user.getPassword().equals(password))
+				.findFirst()
+				.orElseThrow(()->new NullPointerException("It has not found out an user"));
 	}
+	
 	
 	public List<Usuario> getAllUsers(){
 		List<Usuario> usuarios = Arrays.asList(

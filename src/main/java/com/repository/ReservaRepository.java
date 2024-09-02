@@ -1,11 +1,11 @@
-package main.java.repository;
+package main.java.com.repository;
 
 import java.sql.Date;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-import main.java.model.Reserva;
+import main.java.com.model.Reserva;
 
 public class ReservaRepository {
 	public List<Reserva> findAll(){

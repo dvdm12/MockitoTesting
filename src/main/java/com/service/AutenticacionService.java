@@ -1,12 +1,14 @@
-package main.java.service;
+package main.java.com.service;
 
-import java.util.function.Predicate;
 
-import main.java.model.Usuario;
-import main.java.repository.UsuarioRepository;
+import main.java.com.model.Usuario;
+import main.java.com.repository.UsuarioRepository;
 
 public class AutenticacionService {
 	private UsuarioRepository usuarioRepository;
+	
+	
+	
 
 	public AutenticacionService(UsuarioRepository usuarioRepository) {
 		this.usuarioRepository = usuarioRepository;
@@ -33,10 +35,14 @@ public class AutenticacionService {
 	 * @return {@code true} if the user with the provided username and password is found and not null;
 	 *         {@code false} otherwise.
 	 */
-	public boolean authenticate(String username, String password) {
-		Predicate<Usuario> isNotNull = obj-> obj!=null;
-		return isNotNull.test(getUsuarioRepository()
-				.findUserByCredentials(username, password));
+	public boolean authenticate(String username, String password) throws NullPointerException {
+		Usuario user = usuarioRepository.findUserByCredentials(username, password);
+		
+		if(user==null) {
+			throw new NullPointerException("Memory's Reference is null");
+		}
+		
+		return true;
 	}
 	
 }

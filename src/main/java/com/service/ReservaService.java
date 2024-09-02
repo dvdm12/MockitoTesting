@@ -1,10 +1,10 @@
-package main.java.service;
+package main.java.com.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import main.java.model.Reserva;
-import main.java.repository.ReservaRepository;
+import main.java.com.model.Reserva;
+import main.java.com.repository.ReservaRepository;
 
 public class ReservaService {
 
